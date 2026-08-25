@@ -14,8 +14,4 @@ SUBMODULES=(
 
 git submodule update --init --depth 1 "${SUBMODULES[@]}"
 
-# Warm Bazel module cache so first agent build is faster.
-export USE_BAZEL_VERSION=8.5.0
-bazel version >/dev/null
-
 echo "OpenTelemetry C++ dependencies ready."
